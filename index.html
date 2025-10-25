@@ -4,93 +4,98 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
     <style>
         body {
-    margin: 0;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #ffffff;
-    font-family: 'Product Sans', Arial, sans-serif;
-  }
-
-  .container {
-    text-align: center;
-  }
-
-  h1 {
-    font-size: 3rem;
-    font-weight: bold;
-  }
-
-  /* Google-style colors */
-  .letter {
-    display: inline-block;
-    opacity: 0;
-    transform: translateY(-20px);
-    animation: dropIn 0.6s forwards;
-  }
-
-  .letter:nth-child(1) { color: #4285F4; animation-delay: 0s; }
-  .letter:nth-child(2) { color: #EA4335; animation-delay: 0.1s; }
-  .letter:nth-child(3) { color: #FBBC05; animation-delay: 0.2s; }
-  .letter:nth-child(4) { color: #4285F4; animation-delay: 0.3s; }
-  .letter:nth-child(5) { color: #34A853; animation-delay: 0.4s; }
-  .letter:nth-child(6) { color: #EA4335; animation-delay: 0.5s; }
-
-  @keyframes dropIn {
-    to {
-      opacity: 1;
-      transform: translateY(0);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #6e8efb, #a777e3);
+      flex-direction: column;
+      margin: 0;
     }
-  }
 
-  button {
-    margin-top: 40px;
-    padding: 12px 35px;
-    font-size: 1rem;
-    font-weight: bold;
-    color: #fff;
-    background: #4285F4;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-  }
+    .container {
+      background: white;
+      padding: 40px 50px;
+      border-radius: 16px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+      text-align: center;
+      width: 300px;
+    }
 
-  button:hover {
-    background: #3367D6;
-  }  
+    h2 {
+      margin-bottom: 30px;
+      color: #333;
+    }
 
+    button {
+      width: 100%;
+      padding: 12px 20px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: 0.3s;
+    }
+
+    .google-btn {
+      background: #4285F4;
+      color: white;
+    }
+
+    .github-btn {
+      background: #333;
+      color: white;
+    }
+
+    button img {
+      width: 24px;
+      margin-right: 12px;
+    }
+
+    .google-btn:hover {
+      background: #3367d6;
+    }
+
+    .github-btn:hover {
+      background: #24292f;
+    }
+
+    #user-info {
+      margin-top: 20px;
+    }
+
+    #user-info img {
+      border-radius: 50%;
+      margin-top: 10px;
+    }
     </style>
 </head>
 <body>
-     
-          <div class="container">
-    <h1>
-      <span class="letter">W</span>
-      <span class="letter">e</span>
-      <span class="letter">l</span>
-      <span class="letter">c</span>
-      <span class="letter">o</span>
-      <span class="letter">m</span>
-      <span class="letter">e</span>
-      <span class="letter"> </span>
-      <span class="letter" style="color:#4285F4;">t</span>
-      <span class="letter" style="color:#EA4335;">o</span>
-      <span class="letter"> </span>
-      <span class="letter" style="color:#FBBC05;">G</span>
-      <span class="letter" style="color:#4285F4;">o</span>
-      <span class="letter" style="color:#34A853;">o</span>
-      <span class="letter" style="color:#EA4335;">g</span>
-      <span class="letter" style="color:#FBBC05;">l</span>
-      <span class="letter" style="color:#4285F4;">e</span>
-    </h1>
+    <h1>Login with google & github</h1>
 
-       <a href="/home.html">
-         <button>Logout</button>
-       </a>
-    <script src="app.js"></script>
+ <div class="container">
+    <h2>Sign In</h2>
+    <button class="google-btn">
+      <img src="https://img.icons8.com/color/48/000000/google-logo.png"/>
+      Sign in with Google
+    </button>
+    <button class="github-btn">
+      <img src="https://img.icons8.com/ios-glyphs/30/ffffff/github.png"/>
+      Sign in with GitHub
+    </button>
+    <div id="user-info"></div>
+  </div>
+
+
+    <script type="module" src="app.js"></script>
 </body>
 </html>

@@ -9,7 +9,7 @@ const googleBtn = document.querySelector(".google-btn");
 googleBtn.addEventListener("click",()=>{
 signInWithPopup(auth, provider)
   .then((result) => {
-window.location = "/index.html"
+window.location = "home.html"
     const user = result.user;
     console.log(user);
   }).catch((error) => {
