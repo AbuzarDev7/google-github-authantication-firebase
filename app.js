@@ -26,20 +26,21 @@ githubBtn.addEventListener("click",()=>{
 signInWithPopup(auth, githubProvider)
   .then((result) => {
  
-    const token = credential.accessToken;
+    
 
     
     const user = result.user;
-    console.log(user);
-    console.log(token);
+    console.log("userinfo",user);
+
+    window.location = "git.html"
+
   }).catch((error) => {
     
     const errorCode = error.code;
     const errorMessage = error.message;
-    
-    const email = error.customData.email;
+ 
     console.log(errorMessage);
-    console.log(email);
+    // console.log(email);
 
   });
 })
